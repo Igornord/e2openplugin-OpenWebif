@@ -149,6 +149,8 @@ class BaseController(resource.Resource):
 			ret['box'] = open("/proc/stb/info/vumodel").read().strip().lower()
 		elif fileExists("/proc/stb/info/azmodel"):
 			ret['box'] = open("/proc/stb/info/model").read().strip().lower()
+		elif fileExists("/proc/stb/info/model"):
+			ret['box'] = open("/proc/stb/info/model").read().strip().lower()
 			
 		if ret["box"] in ("solo", "duo", "uno", "solo2", "duo2"):
 			ret["remote"] = "vu_normal"

@@ -106,9 +106,9 @@ def getInfo():
 	else:
 		f = open("/proc/stb/info/model",'r')
  		model = f.readline().strip().lower()
- 		if model == "spark" or model == "spark7162"
- 		    brand = "GI"
  		f.close()
+ 		if model == "spark" or model == "spark7162":
+ 			brand = "AMIKO"
 
 	info['brand'] = brand
 	info['model'] = model
